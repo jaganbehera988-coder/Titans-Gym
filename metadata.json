@@ -1,0 +1,6 @@
+{
+  "name": "Titans Gym Cuttack",
+  "description": "Premium Strength Training, CrossFit & Zumba Gym in Naya Bazaar, Cuttack",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

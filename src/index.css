@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #101314;
+  --secondary: #C4262E;
+  --secondary-hover: #A81F26;
+  --accent: #E8B84B;
+  --bg: #F7F5F2;
+  --surface: #FFFFFF;
+  --dark-surface: #1E2224;
+  --text-muted: #5C6366;
+  --text-main: #161A1B;
+  --color-primary: #101314;
+  --color-secondary: #C4262E;
+  --color-secondary-hover: #A81F26;
+  --color-accent: #E8B84B;
+  --color-background: #F7F5F2;
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #1E2224;
+  --color-text-main: #161A1B;
+  --color-text-muted: #5C6366;
+  --font-heading: 'Bebas Neue', 'Impact', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@theme {
+  --font-bebas: 'Bebas Neue', 'Impact', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --color-titan-charcoal: #101314;
+  --color-titan-red: #C4262E;
+  --color-titan-red-dark: #A81F26;
+  --color-titan-amber: #E8B84B;
+  --color-titan-bg: #F7F5F2;
+  --color-titan-surface-dark: #1E2224;
+  --color-titan-surface-card: #171A1C;
+  --color-titan-text: #161A1B;
+  --color-titan-muted: #5C6366;
+}
+
+/* Custom Typography & Utility Styles */
+.font-heading,
+.bebas {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.industrial-border {
+  border-left: 4px solid var(--secondary);
+}
+
+.input-field {
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(196, 38, 46, 0.15);
+}
+
+.hero-gradient {
+  background: linear-gradient(rgba(16, 19, 20, 0.85), rgba(16, 19, 20, 0.95)), url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(196, 38, 46, 0.35);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-light {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.btn-secondary-light:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #101314;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E3438;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4262E;
+}
+
